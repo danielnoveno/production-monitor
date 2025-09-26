@@ -1,16 +1,18 @@
 package main
 
 import (
-    "fmt"
-    "os/exec"
-    "fyne.io/fyne/v2"
-    "fyne.io/fyne/v2/app"
-    "fyne.io/fyne/v2/container"
-    "fyne.io/fyne/v2/widget"
+	"fmt"
+	"os/exec"
+
+	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/widget"
 )
 
 func runPythonScript(script string) (string, error) {
-    out, err := exec.Command("python", script).CombinedOutput()
+ // Ganti panggilan Python
+    out, err := exec.Command("python_scripts\\dist\\dummy_scan.exe").CombinedOutput()
     return string(out), err
 }
 
